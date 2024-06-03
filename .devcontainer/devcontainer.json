@@ -1,0 +1,46 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "BICEP-DOC",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"build": {
+	    "context": "..",
+	    "dockerfile": "../Dockerfile"
+	},
+//	"dockerComposeFile": "../compose.yml",
+//	"service": "bicep-doc",
+//  	"workspaceFolder": "/workspace",
+//	"shutdownAction": "stopCompose",
+
+   // needed for podman
+	"runArgs": ["--userns=keep-id"],
+	"containerEnv": {
+		"HOME": "/home/jovyan"
+	  },
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+//	"postCreateCommand": "pip3 install --user -r requirements.txt"
+
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": ["ms-python.python", "ms-toolsai.jupyter"]
+		}
+	}
+
+//	"mounts": [
+//		{
+//			"source": "${localEnv:HOME}${localEnv:USERPROFILE}/DATA/ESA-BICEP/",
+//			"target": "/workspace/DATA",
+//			"type": "bind"
+//		}
+//	]
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

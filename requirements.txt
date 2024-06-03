@@ -1,0 +1,25 @@
+# BICEP code requirements
+numpy
+scipy
+matplotlib
+seaborn
+ipython
+jupyter
+pandas
+xarray
+dask[complete]
+# for era5 grib files
+cfgrib
+tables
+netcdf4
+# no-binary needed with macos, at least
+#shapely --no-binary=shapely
+shapely
+cartopy
+cmocean
+joblib
+#scikit-learn==1.4.0
+scikit-learn
+statsmodels
+pydot
+optuna
